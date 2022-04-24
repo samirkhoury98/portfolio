@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {background-color: red;
+    font-family: 'Montserrat', sans-serif;}
+header {
+}
+section {
+    border: 1px solid black;
+}
+.section-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-title {
+    border: 5px solid black;
+    text-align:center;
+    padding: 15px 122px; 
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+.skills {
+    background-color: grey;
+}
+.section-subset-content {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+}
+.section-subset-item {
+background-color: green;
+padding: 20px
+}
+.section-subset-item img {
+    display: block;
+    margin: 0 auto 10px;
+    
+}
+.section-subset-item-title {
+    display:block;
+    text-align: center;
+}
+.section-subset-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5rem
+}
+footer {
+    background-color: black;
+     color: aliceblue;
+}
