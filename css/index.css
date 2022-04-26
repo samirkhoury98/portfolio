@@ -2,17 +2,59 @@
     margin: 0;
     padding: 0;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #c4c4c4;
     font-family: 'Montserrat', sans-serif;
 }
-header {
+
+.navul {
+    display: flex;
+    justify-content: space-between;
 }
-section {
+
+.navul li {
+    list-style: none;
 }
+.navul a {
+    color: wheat;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 20px;
+
+}
+.navul a:hover,
+.navul .is-active {
+    background-color: white;
+    color: #820c01;
+    border-radius: 20px;
+}
+
+.header {
+    background-color: #820c01;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+section {}
+
 .section-heading {
     display: flex;
     justify-content: center;
@@ -20,36 +62,41 @@ section {
     margin-bottom: 50px;
 
 }
+
 .section-title {
     border: 5px solid black;
-    text-align:center;
-    padding: 15px 122px; 
+    text-align: center;
+    padding: 15px 122px;
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .5rem;
 }
+
 .discography {
     background-color: #820c01;
     color: wheat;
     padding: 40px 0px;
     margin-bottom: 40px;
 }
+
 .discography-title {
     text-align: center;
     letter-spacing: .3rem;
     font-size: 20px;
     margin-bottom: 20px;
 }
+
 .projects {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-evenly;
     justify-items: center;
     align-content: space-evenly;
     align-items: flex-start;
 }
+
 .project {
     position: relative;
     display: flex;
@@ -57,13 +104,29 @@ section {
     width: 200px;
     justify-content: center;
 }
-.project-title {    
+
+.project-coverart {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+}
+
+.project:hover .project-coverart {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    -webkit-transition: .500ms ease-in-out;
+    transition: 500ms ease-in-out;
+}
+
+.project-title {
     padding-top: 15px;
     letter-spacing: .3rem;
     text-transform: uppercase;
     font-weight: 500;
     text-align: center;
 }
+
 .project-info-link {
     width: 50px;
     height: 50px;
@@ -71,10 +134,14 @@ section {
     display: inline-flex;
     align-items: center;
 }
+
 .project:hover .project-info {
-display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: visible;
+    opacity: 1;
 }
-.project-info{
+
+.project-info {
     position: absolute;
     top: 0;
     right: 0;
@@ -82,36 +149,44 @@ display: flex;
     bottom: 0;
     width: 200px;
     height: 200px;
-    background-color:rgba(0, 0, 0, .5);
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: all 500ms ease-in-out;
+    background-color: transparent;
 }
+
 .skills {
     padding-top: 40px;
     padding-bottom: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
+
 .section-subset-content {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 20px;
 }
+
 .section-subset-item {
-padding: 20px
+    padding: 20px
 }
+
 .section-subset-item img {
     display: block;
     margin: 0 auto 10px;
-    
+
 }
+
 .section-subset-item-title {
-    display:block;
+    display: block;
     text-align: center;
 }
+
 .section-subset-title {
     font-size: 20px;
     font-weight: 700;
@@ -119,6 +194,7 @@ padding: 20px
     letter-spacing: .5rem;
     margin-bottom: 25px;
 }
+
 .portfolio .section-heading {
     background-color: #820c01;
     padding-top: 50px;
@@ -126,36 +202,42 @@ padding: 20px
     color: wheat;
     margin-bottom: 0px;
 }
+
 .portfolio .section-title {
     border-color: wheat;
 }
+
 .portfolio-projects {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 20px;
     border-top: 20px solid black;
     border-bottom: 20px solid black;
 
 }
+
 .portfolio-project img {
     width: 100%;
     height: auto;
     line-height: 0;
     display: block;
 }
+
 footer {
     background-color: #820c01;
-     color: wheat;
-     text-align: center;
-     padding-top: 30px;
-     padding-bottom: 30px;
+    color: wheat;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 }
+
 .footer-copyright {
     color: wheat;
     font-size: 15px;
     padding-top: 20px;
 }
+
 .footer-top-link {
     color: wheat;
     letter-spacing: .15rem;
@@ -163,6 +245,7 @@ footer {
     text-decoration: none;
     font-size: 15px;
 }
+
 .footer-top-link img {
     display: block;
     margin: 0 auto;

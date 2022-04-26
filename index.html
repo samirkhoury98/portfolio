@@ -11,18 +11,51 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-<header>
-    Logo
-    Navigation
+<header class="header">
+   <div class="header-inner"><img src="./img/Portfolio logo.png" alt="">
+    <nav class="nav">
+        <ul class="navul">
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#discography">
+                    Discography
+                </a>
+            </li>
+            <li>
+                <a href="#aboutme">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#portfolio">
+                    Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="#contactme">
+                    Contact Me
+                </a>
+            </li>
+        </ul>
+    </nav></div>
 </header>
 <div id="top"></div>
 <main>
     <section>Hero</section>
-    <section class="discography">
+    <section id="discography" class="discography">
         <h1 class="discography-title">Discography</h1>
         <div class="projects">
             <div class="project">
-                <img src="./img/inshallah.png" alt="">
+                <img class="project-coverart" src="./img/inshallah.png" alt="">
                 <div class="project-title">
                     INSHALLAH: LOCKWOOD AVE -(EP)
                 </div>
@@ -34,7 +67,7 @@
                 </div>
             </div>
             <div class="project">
-                <img src="./img/midnight.png" alt="">
+                <img class="project-coverart" src="./img/midnight.png" alt="">
                 <div class="project-title">
                     MIDNIGHT-(SINGLE)
                 </div>
@@ -46,7 +79,7 @@
                 </div>
             </div>
             <div class="project">
-                <img src="./img/havana.png" alt="">
+                <img class="project-coverart" src="./img/havana.png" alt="">
                 <div class="project-title">
                     HAVANA - (SINGLE BY KRYOKO)
                 </div>
@@ -58,9 +91,9 @@
                 </div>
             </div>
             <div class="project">
-                <img src="./img/Big Body Sam-4.png" alt="">
+                <img class="project-coverart" src="./img/Big Body Sam-4.png" alt="">
                 <div class="project-title">
-                ON A ROLL - (SINGLE)    
+                ON A ROLL - (SINGLE)
                 </div>
                 <div class="project-info">
                     <a class="project-info-link" href="https://music.apple.com/us/album/on-a-roll-feat-thiigo/1524590287?i=1524590291"target="_blank"><img src="./img/applemusic.svg" width="50"
@@ -70,7 +103,7 @@
                 </div>
             </div>
             <div class="project">
-                <img src="./img/summervibe.png" alt="">
+                <img class="project-coverart" src="./img/summervibe.png" alt="">
                 <div class="project-title">
                     SUMMER VIBE - (FEATURED ON: "COMING UP NEXT!" EP BY THIIGO)
                 </div>
@@ -83,12 +116,12 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="aboutme">
         <header class="section-heading">
             <h1 class="section-title">About Me</h1>
         </header>
     </section>
-    <section class="skills">
+    <section id="skills" class="skills">
         <header class="section-heading">
             <h1 class="section-title">Skills</h1>
         </header>
@@ -112,11 +145,11 @@
                 <div class="section-subset-item"><img src="./img/Vector.svg" alt=""><span class="section-subset-item-title">?</span></div>
                 <div class="section-subset-item"><img src="./img/Vector.svg" alt=""><span class="section-subset-item-title">?</span></div>
                 <div class="section-subset-item"><img src="./img/Vector.svg" alt=""><span class="section-subset-item-title">?</span></div>
-                
+
             </div>
         </section>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <header class="section-heading">
             <h1 class="section-title">Portfolio</h1>
         </header>
@@ -142,7 +175,7 @@
 
         </div>
     </section>
-    <section>
+    <section id="contactme">
         <header class="section-heading">
             <h1 class="section-title">Contact ME</h1>
         </header>
@@ -155,5 +188,6 @@
 </a>
     <div class="footer-copyright">@2022 BIGBODYENTERTAINMENT All Rights Reserved.</div>
 </footer>
+<script src="./js/index.js"></script>
 </body>
 </html>
