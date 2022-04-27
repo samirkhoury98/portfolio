@@ -280,6 +280,8 @@ section {}
     display: flex;
     flex-direction: column;
     padding-top: 40px;
+    z-index: 9;
+    position: relative;
 }
 input, textarea {
     border-left: 3px solid black;
