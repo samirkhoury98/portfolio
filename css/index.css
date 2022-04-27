@@ -6,7 +6,29 @@
 html {
     scroll-behavior: smooth;
 }
-
+.hero {
+        height: calc(100vh - 130px);
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        padding-left: 70px;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;   
+    font-size: 30px;
+    font-weight: 500;
+    color: #909090;
+}
+.homeicon img {
+    display: inline-flex;
+    padding-top: 30px;
+}
+#bbs {
+    font-size: 75px;
+    color: black;
+    text-decoration: underline;
+}
 body {
     background-color: #c4c4c4;
     font-family: 'Montserrat', sans-serif;
@@ -25,6 +47,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     padding: 10px 20px;
+    margin: 0 10px;
 
 }
 .navul a:hover,
