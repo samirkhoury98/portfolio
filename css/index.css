@@ -266,7 +266,57 @@ section {}
     line-height: 0;
     display: block;
 }
-
+.form-element {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#my-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+input, textarea {
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 0;
+    border-top: 0;
+    background: transparent;
+    margin-bottom: 40px;
+    padding: 15px 10px 5px; 
+}
+textarea {
+    height: 150px;
+    font-family: 'Montserrat', sans-serif;
+}
+.form-submit {
+    text-align: center;
+}
+#my-form-button {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    background: transparent;
+    display: inline-flex;
+    text-align: center;
+    padding: 10px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#my-form-status {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 20px;
+}
+::placeholder {
+    color: #8b8b8b;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 footer {
     background-color: #820c01;
     color: wheat;

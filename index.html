@@ -232,7 +232,19 @@
             <header class="section-heading">
                 <h1 class="section-title">Contact ME</h1>
             </header>
+        <div class="form-element">
+            <p>LEAVE YOUR NAME, NUMBER AND EMAIL ALONG WITH A MESSAGE! I’LL GET BACK TO YOU AS SOON AS I CAN!</p>
+            <form id="my-form" action="https://formspree.io/f/mwkywogz" method="POST">
+                <input type="text" name="fullName" placeholder="Full Name" />
+                <input type="email" name="email" placeholder="Email:"/>
+                <input type="tel" name="phoneNumber" placeholder="Phone Number:"/>
+                <textarea name="message" placeholder="Message:"></textarea> 
+                
+               <div class="form-submit"><button id="my-form-button">Submit</button></div> 
 
+                <p id="my-form-status"></p>
+              </form>
+        </div>
         </section>
     </main>
     <footer>
