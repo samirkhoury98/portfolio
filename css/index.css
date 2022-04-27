@@ -295,6 +295,9 @@ input, textarea {
 input:focus, textarea:focus {
 background-color: white;
 }
+textarea {
+    font-family: 'Montserrat', sans-serif;
+}
 .form-submit {
     text-align: center;
 }
