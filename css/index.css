@@ -22,6 +22,8 @@ html {
     font-size: 30px;
     font-weight: 500;
     color: #909090;
+    position: relative;
+    z-index: 9;
 }
 .homeicon img {
     display: inline-flex;
