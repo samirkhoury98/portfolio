@@ -21,9 +21,14 @@ html {
     flex-direction: column;   
     font-size: 30px;
     font-weight: 500;
-    color: #909090;
     position: relative;
     z-index: 9;
+    color: #909090;
+
+}
+.hero-content-subtitle a {
+    color: #909090;
+    text-decoration: none;
 }
 .homeicon img {
     display: inline-flex;
