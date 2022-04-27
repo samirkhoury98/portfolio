@@ -292,9 +292,8 @@ input, textarea {
     margin-bottom: 40px;
     padding: 15px 10px 5px; 
 }
-textarea {
-    height: 150px;
-    font-family: 'Montserrat', sans-serif;
+input:focus, textarea:focus {
+background-color: white;
 }
 .form-submit {
     text-align: center;
