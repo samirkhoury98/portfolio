@@ -301,6 +301,9 @@ textarea {
 .form-submit {
     text-align: center;
 }
+.form-submit :hover {
+    text-decoration: underline;
+}
 #my-form-button {
     border-left: 3px solid black;
     border-right: 3px solid black;
