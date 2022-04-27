@@ -11,11 +11,13 @@ const navLinks = document.querySelectorAll('.navul a');
       event.target.classList.add('is-active');
     })
 })
-
 particlesJS.load('particles-js', './asset/particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
 
+particlesJS.load('particles-forms-js', './asset/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 
 var form = document.getElementById("my-form");
     
