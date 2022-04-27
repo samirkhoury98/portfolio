@@ -5,7 +5,9 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 135px;
 }
+
 .hero {
         height: calc(100vh - 130px);
         justify-content: flex-start;
@@ -38,6 +40,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
+
 
 }
 body {
