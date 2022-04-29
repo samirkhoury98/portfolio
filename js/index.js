@@ -58,3 +58,16 @@ var form = document.getElementById("my-form");
       event.target.classList.remove('show');
        document.querySelector('.bbs--first').classList.add('show');
      });
+
+     document.querySelector('.mobile-menu').addEventListener('click', (event) => {
+      console.log('click');
+      if(document.querySelector('.nav').classList.contains('is-active')) {
+        document.querySelector('.nav').classList.remove('is-active');
+        document.querySelector('.mobile-menu').classList.remove('is-active');
+
+      }
+      else {
+        document.querySelector('.nav').classList.add('is-active');
+        document.querySelector('.mobile-menu').classList.add('is-active');
+      }
+   });

@@ -37,8 +37,8 @@
 }
 
 .header-inner {
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
 }
 
@@ -63,10 +63,49 @@ width: 40px;
 
 .portfolio-projects {
     grid-template-columns: repeat(1, 1fr);
-
-
 }
 
 .form-element {
     padding: 0 20px;
 }
+
+.navul a {
+    display: block;
+    margin: 0 0 0 20px;
+    padding: 0 0 10px 0;
+}
+
+.navul a:hover,
+.navul .is-active {
+    background-color: transparent;
+    color: wheat;
+    border-radius: 0;
+}
+
+.mobile-menu {
+    position: absolute;
+    display: block;
+    top: 40px;
+    right: 20px;
+
+}
+.mobile-menu .menu-close-icon{
+    display: none;
+}
+.mobile-menu .menu-icon{
+    display: block;
+}
+.mobile-menu.is-active .menu-close-icon{
+    display: block;
+    margin-top: -5px;
+}
+.mobile-menu.is-active .menu-icon{
+    display: none;
+}
+.nav {
+    display: none;
+}
+.nav.is-active {
+    display: block;
+}
+
