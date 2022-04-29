@@ -107,8 +107,6 @@ body {
 
 }
 
-section {}
-
 .section-heading {
     display: flex;
     justify-content: center;
@@ -237,21 +235,14 @@ section {}
 .section-subset-item img {
     display: block;
     margin: 0 auto 10px;
+    height: 100px;
+    width: 100px;
 
 }
 
 .section-subset-item-title {
     display: block;
     text-align: center;
-}
-.section-subset-item2 img {
-    display: block;
-    text-align: end;
-}
-.section-subset-item2 img {
-    padding: 70px;
-    padding-bottom: 20px;
-    height: 130px;
 }
 
 .section-subset-title {

@@ -1,0 +1,72 @@
+.section-heading {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+.section-subset {
+    padding: 0 20px;
+}
+
+.section-title {
+    padding: 20px;
+}
+
+
+.aboutmedev {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.projects {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.section-subset-content {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.header {
+    position: relative;
+    top: inherit;
+}
+
+.navul {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-inner {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bbs {
+    font-size: 45px;
+}
+
+.hero-content {
+    font-size: 20px;
+}
+
+.hero {
+    padding: 100px 20px;
+    height: auto
+
+}
+
+.homeicon img {
+height: 40px;
+width: 40px;
+}
+
+.portfolio-projects {
+    grid-template-columns: repeat(1, 1fr);
+
+
+}
+
+.form-element {
+    padding: 0 20px;
+}
