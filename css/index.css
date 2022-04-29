@@ -305,6 +305,9 @@ input, textarea {
     background: transparent;
     margin-bottom: 40px;
     padding: 15px 10px 5px; 
+    -webkit-appearance: none;
+    border-radius: 0;
+
 }
 input:focus, textarea:focus {
 background-color: white;
@@ -329,6 +332,9 @@ textarea {
     padding: 10px 30px;
     font-weight: 700;
     text-transform: uppercase;
+    color: black;
+    -webkit-appearance: none;
+
 }
 #my-form-status {
     text-align: center;
