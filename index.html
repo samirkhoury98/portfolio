@@ -59,12 +59,16 @@
         <section class="hero">
             <div id="particles-js"></div>
             <div class="hero-content">
-                <div id="bbs">
+                <div class="bbs bbs--first show">
                      BIGBODYSAM
                 </div>
+                <div class="bbs bbs--second">
+                    SAMIR KHOURY
+               </div>
                 <div class="hero-content-subtitle">
-                   <a  href="#skills">Full-Stack Developer</a> /
-                   <a href="#discography">Musical Genius</a> 
+                   <a class="shine" href="#skills">Full-Stack Developer</a> /
+                   <a class="shine"
+                   href="#discography">Musical Genius</a> 
                 </div>
                 <div>
                 <a class="homeicon" href="https://github.com/samirkhoury98" target="_blank"><img
@@ -172,7 +176,7 @@
                     <div>
 
                     </div>
-                    <div>
+                    <div class="aboutmedev">
                         <h3>DEVELOPMENT</h3>
                         <P>I LEARNED FRONT-END AND BACK-END DEVELOPMENT AT THE LearnAcademy BASED IN SAN DIEGO, CALIFORNIA AND I GRADUATED WITH FULL-STACK STATUS IN THE SUMMER OF '22</P>
                     </div>
@@ -207,13 +211,13 @@
             <section class="section-subset">
                 <h2 class="section-subset-title">Learning:</h2>
                 <div class="section-subset-content">
-                    <div class="section-subset-item"><img src="./img/Vector.svg" alt=""><span
+                    <div class="section-subset-item2"><img src="./img/rails_icon.svg" alt=""><span
+                            class="section-subset-item-title">RAILS</span></div>
+                    <div class="section-subset-item2"><img src="./img/postgresql-icon.svg" alt=""><span
+                            class="section-subset-item-title">POSTGRESQL</span></div>
+                    <div class="section-subset-item2"><img src="./img/Vector.svg" alt=""><span
                             class="section-subset-item-title">?</span></div>
-                    <div class="section-subset-item"><img src="./img/Vector.svg" alt=""><span
-                            class="section-subset-item-title">?</span></div>
-                    <div class="section-subset-item"><img src="./img/Vector.svg" alt=""><span
-                            class="section-subset-item-title">?</span></div>
-                    <div class="section-subset-item"><img src="./img/Vector.svg" alt=""><span
+                    <div class="section-subset-item2"><img src="./img/Vector.svg" alt=""><span
                             class="section-subset-item-title">?</span></div>
 
                 </div>
@@ -255,7 +259,7 @@
             <form id="my-form" action="https://formspree.io/f/mwkywogz" method="POST">
                 <input type="text" name="fullName" placeholder="Full Name" required />
                 <input type="email" name="email" placeholder="Email:" required="@">
-                <input type="tel" name="phoneNumber" placeholder="Phone Number:"/>
+                <input type="tel" name="phoneNumber" placeholder="Phone Number:" required="number"/>
                 <textarea name="message" placeholder="Message:" required></textarea> 
                 
                <div class="form-submit"><button id="my-form-button">Submit</button></div> 

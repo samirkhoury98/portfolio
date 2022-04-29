@@ -49,3 +49,12 @@ var form = document.getElementById("my-form");
       });
     }
     form.addEventListener("submit", handleSubmit)
+
+    document.querySelector('.bbs--first').addEventListener('click', (event) => {
+     event.target.classList.remove('show');
+      document.querySelector('.bbs--second').classList.add('show');
+    });
+    document.querySelector('.bbs--second').addEventListener('click', (event) => {
+      event.target.classList.remove('show');
+       document.querySelector('.bbs--first').classList.add('show');
+     });

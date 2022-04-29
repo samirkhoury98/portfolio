@@ -29,15 +29,25 @@ html {
 .hero-content-subtitle a {
     color: #909090;
     text-decoration: none;
+    display: inline-block;
 }
+.shine {
+
+}
+
 .homeicon img {
     display: inline-flex;
     padding-top: 30px;
 }
-#bbs {
+.bbs {
     font-size: 75px;
     color: black;
     text-decoration: underline;
+    display: none;
+}
+.bbs.show {
+    display: block;
+
 }
 #particles-js, #particles-forms-js {
     position: absolute;
@@ -201,6 +211,10 @@ section {}
     transition: all 500ms ease-in-out;
     background-color: transparent;
 }
+.aboutmedev {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 .skills {
     padding-top: 40px;
@@ -229,6 +243,15 @@ section {}
 .section-subset-item-title {
     display: block;
     text-align: center;
+}
+.section-subset-item2 img {
+    display: block;
+    text-align: end;
+}
+.section-subset-item2 img {
+    padding: 70px;
+    padding-bottom: 20px;
+    height: 130px;
 }
 
 .section-subset-title {
