@@ -71,3 +71,30 @@ var form = document.getElementById("my-form");
         document.querySelector('.mobile-menu').classList.add('is-active');
       }
    });
+   
+   function swiperMode() {
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    slidesPerView: 1, autoHeight: true,
+
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      1000: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      }
+    }
+  });
+}
+
+/* On Load
+**************************************************************/
+window.addEventListener('load', function() {
+swiperMode();
+});

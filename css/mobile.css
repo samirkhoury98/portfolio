@@ -1,59 +1,10 @@
-.section-heading {
-    padding-left: 20px;
-    padding-right: 20px;
-    display: block;
-}
-
-.section-subset {
-    padding: 0 20px;
-}
-
-.section-title {
-    padding: 20px;
-}
-
-
-.aboutmedev {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.projects {
-    grid-template-columns: repeat(1, 1fr);
-}
-
-.section-subset-content {
-    grid-template-columns: repeat(1, 1fr);
-}
-
-.header {
-    position: relative;
-    top: inherit;
-}
-
-.navul {
-    flex-direction: column;
-    justify-content: center;
-}
-
-.header-inner {
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.bbs {
-    font-size: 45px;
+.hero {
+    padding: 100px 20px;
+    height: auto
 }
 
 .hero-content {
     font-size: 20px;
-}
-
-.hero {
-    padding: 100px 20px;
-    height: auto
-
 }
 
 .homeicon img {
@@ -61,12 +12,21 @@ height: 40px;
 width: 40px;
 }
 
-.portfolio-projects {
-    grid-template-columns: repeat(1, 1fr);
+.bbs {
+    font-size: 45px;
 }
 
-.form-element {
-    padding: 0 20px;
+.nav {
+    display: none;
+}
+
+.nav.is-active {
+    display: block;
+}
+
+.navul {
+    flex-direction: column;
+    justify-content: center;
 }
 
 .navul a {
@@ -80,6 +40,61 @@ width: 40px;
     background-color: transparent;
     color: wheat;
     border-radius: 0;
+}
+
+.header {
+    position: relative;
+    top: inherit;
+}
+
+.header-inner {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.section-heading {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+.section-title {
+    padding: 20px;
+}
+
+.section-subset {
+    padding: 0 20px;
+}
+
+.projects {
+    grid-template-columns: repeat(1, 1fr);
+}
+.project {
+    justify-content: center;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -5px;
+}
+.swiper-pagination-bullet-active {
+    background-color: wheat;
+}
+.aboutmedev {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-subset-content {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.portfolio-projects {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.form-element {
+    padding: 0 20px;
 }
 
 .mobile-menu {
@@ -102,10 +117,7 @@ width: 40px;
 .mobile-menu.is-active .menu-icon{
     display: none;
 }
-.nav {
-    display: none;
-}
-.nav.is-active {
+
+.swiper-button-prev, .swiper-button-next {
     display: block;
 }
-
