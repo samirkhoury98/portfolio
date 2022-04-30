@@ -264,7 +264,9 @@ body {
     letter-spacing: .5rem;
     margin-bottom: 25px;
 }
-
+.portfolio {
+    margin-bottom: 40px;
+}
 .portfolio .section-heading {
     background-color: #820c01;
     padding-top: 50px;
@@ -402,12 +404,13 @@ footer {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 40px;
   }
 
   .swiper-portfolio img {
       width: 100%;
       height: auto;
-      
+
   }
 
   .swiper-portfolio .swiper-slide {
