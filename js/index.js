@@ -82,18 +82,17 @@ const mobileNav = () => {
 }
 
 const swiperMode = () => {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper-discography', {
     // Optional parameters
     direction: 'horizontal',
-    slidesPerView: 1, autoHeight: true,
-
+    slidesPerView: 1,
+    autoHeight: true,
 
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
     },
     breakpoints: {
-      // when window width is >= 320px
       1000: {
         slidesPerView: 5,
         spaceBetween: 20,
@@ -101,6 +100,24 @@ const swiperMode = () => {
     }
   });
 }
+const swiperPortfolioMode = () => {
+  let swiperPortfolio  = new Swiper(".swiper-portfolio", {
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1000: {
+        slidesPerView: 3,
+        grid: {
+          fill: 'row',
+          rows: 2,
+        },
+      }
+    }
+  });
+  }
 
 /* On Load
 **************************************************************/
@@ -111,4 +128,5 @@ window.addEventListener('load', function () {
   form();
   heroTitle();
   mobileNav();
+  swiperPortfolioMode();
 });

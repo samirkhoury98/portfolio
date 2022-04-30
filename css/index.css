@@ -278,12 +278,13 @@ body {
 }
 
 .portfolio-projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 20px;
     border-top: 20px solid black;
     border-bottom: 20px solid black;
-
+}
+.portfolio-project {
+    display: block;
+    line-height: 0;
 }
 
 .portfolio-project img {
@@ -291,6 +292,7 @@ body {
     height: auto;
     line-height: 0;
     display: block;
+    
 }
 #contactme{
     position: relative;
@@ -390,11 +392,38 @@ footer {
 .mobile-menu {
     display: none;
 }
-.swiper {
+.swiper-discography {
     width: 100%;
     height: 300px;
   }
 
-  .swiper-button-prev, .swiper-button-next {
-      display: none;
+  .swiper-portfolio {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-portfolio img {
+      width: 100%;
+      height: auto;
+      
+  }
+
+  .swiper-portfolio .swiper-slide {
+    height: calc((100% - 30px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
   }
