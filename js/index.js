@@ -6,7 +6,7 @@ const navigation = () => {
       const activeNavLinks = document.querySelector('.navul .is-active');
       if (activeNavLinks) {
         activeNavLinks.classList.remove('is-active');
-  
+
       }
       event.target.classList.add('is-active');
     })
@@ -17,7 +17,7 @@ const particles = () => {
   particlesJS.load('particles-js', './asset/particles.json', function () {
     console.log('callback - particles.js config loaded');
   });
-  
+
   particlesJS.load('particles-forms-js', './asset/particles.json', function () {
     console.log('callback - particles.js config loaded');
   });
@@ -53,7 +53,7 @@ const form = () => {
       status.innerHTML = "Oops! There was a problem submitting your form"
     });
   }
-  form.addEventListener("submit", handleSubmit) 
+  form.addEventListener("submit", handleSubmit)
 }
 
 const heroTitle = () => {
@@ -62,6 +62,10 @@ const heroTitle = () => {
     document.querySelector('.bbs--second').classList.add('show');
   });
   document.querySelector('.bbs--second').addEventListener('click', (event) => {
+    event.target.classList.remove('show');
+    document.querySelector('.bbs--third').classList.add('show');
+  });
+  document.querySelector('.bbs--third').addEventListener('click', (event) => {
     event.target.classList.remove('show');
     document.querySelector('.bbs--first').classList.add('show');
   });
@@ -72,7 +76,7 @@ const mobileNav = () => {
     if (document.querySelector('.nav').classList.contains('is-active')) {
       document.querySelector('.nav').classList.remove('is-active');
       document.querySelector('.mobile-menu').classList.remove('is-active');
-  
+
     }
     else {
       document.querySelector('.nav').classList.add('is-active');
@@ -101,7 +105,7 @@ const swiperMode = () => {
   });
 }
 const swiperPortfolioMode = () => {
-  let swiperPortfolio  = new Swiper(".swiper-portfolio", {
+  let swiperPortfolio = new Swiper(".swiper-portfolio", {
     slidesPerView: 1,
     pagination: {
       el: ".swiper-pagination",
@@ -117,7 +121,7 @@ const swiperPortfolioMode = () => {
       }
     }
   });
-  }
+}
 
 /* On Load
 **************************************************************/
