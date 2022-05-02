@@ -56,20 +56,47 @@ const form = () => {
   form.addEventListener("submit", handleSubmit)
 }
 
-const heroTitle = () => {
-  document.querySelector('.bbs--first').addEventListener('click', (event) => {
-    event.target.classList.remove('show');
-    document.querySelector('.bbs--second').classList.add('show');
-  });
-  document.querySelector('.bbs--second').addEventListener('click', (event) => {
-    event.target.classList.remove('show');
-    document.querySelector('.bbs--third').classList.add('show');
-  });
-  document.querySelector('.bbs--third').addEventListener('click', (event) => {
-    event.target.classList.remove('show');
-    document.querySelector('.bbs--first').classList.add('show');
+let i = 0;
+
+const typeWriter = (txt) => {
+  if (i < txt.length) {
+    document.getElementsByClassName('typewrite')[0].innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, 65, txt);
+  }
+}
+
+const clickHeroTitle = () => {
+  document.querySelector('.content').addEventListener('click', e => {
+    let content = document.querySelector('.content');
+    let jsTypewriterContent = document.getElementsByClassName('typewrite')[0];
+
+    //Reset count to start the begining of the character.
+    i = 0;
+
+    // Remove previous content to start empty content.
+    document.getElementsByClassName('typewrite')[0].innerHTML = ''
+
+    if (content.classList.contains('first')) {
+      content.classList.remove('first');
+      content.classList.add('second');
+      setTimeout(typeWriter, 2000, 'BIGBODYSAM');
+    } else if (content.classList.contains('second')) {
+      content.classList.remove('second');
+      content.classList.add('third');
+      setTimeout(typeWriter, 2000, 'HAPPY YOU\'RE HERE');
+    } else {
+      content.classList.remove('third');
+      content.classList.add('first');
+      setTimeout(typeWriter, 2000, 'SAMIR KHOURY');
+    }
   });
 }
+
+
+// Add this to the onload 
+clickHeroTitle();
+
 
 const mobileNav = () => {
   document.querySelector('.mobile-menu').addEventListener('click', (event) => {
