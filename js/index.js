@@ -69,32 +69,31 @@ const typeWriter = (txt) => {
   }
 }
 
-const clickHeroTitle = () => {
-  document.querySelector('.content').addEventListener('click', e => {
-    let content = document.querySelector('.content');
+const clickHeroTitle = (evt) => {
+  evt.preventDefault();
+  let content = document.querySelector('.content');
 
-    //Reset count to start the begining of the character.
-    i = 0;
+  //Reset count to start the begining of the character.
+  i = 0;
 
-    // Remove previous content to start new content.
-    document.getElementsByClassName('typewrite')[0].innerHTML = '';
-    content.style.pointerEvents = 'none';
+  // Remove previous content to start new content.
+  document.getElementsByClassName('typewrite')[0].innerHTML = '';
+  content.style.pointerEvents = 'none';
 
 
-    if (content.classList.contains('first')) {
-      content.classList.remove('first');
-      content.classList.add('second');
-      setTimeout(typeWriter, 50, 'BIGBODYSAM');
-    } else if (content.classList.contains('second')) {
-      content.classList.remove('second');
-      content.classList.add('third');
-      setTimeout(typeWriter, 50, 'HAPPY YOU\'RE HERE');
-    } else {
-      content.classList.remove('third');
-      content.classList.add('first');
-      setTimeout(typeWriter, 50, 'SAMIR KHOURY');
-    }
-  });
+  if (content.classList.contains('first')) {
+    content.classList.remove('first');
+    content.classList.add('second');
+    setTimeout(typeWriter, 50, 'BIGBODYSAM');
+  } else if (content.classList.contains('second')) {
+    content.classList.remove('second');
+    content.classList.add('third');
+    setTimeout(typeWriter, 50, 'HAPPY YOU\'RE HERE');
+  } else {
+    content.classList.remove('third');
+    content.classList.add('first');
+    setTimeout(typeWriter, 50, 'SAMIR KHOURY');
+  }
 }
 
 
@@ -153,6 +152,45 @@ const swiperPortfolioMode = () => {
   });
 }
 
+const modal = () => {
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.querySelectorAll(".project-info-link-apple");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  [...btn].forEach(btn => {
+    btn.onclick = function (evt) {
+      const url = btn.dataset.url;
+      document.querySelector(".apple-iframe").src = url;
+      modal.style.display = "block";
+    }
+  });
+
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+    document.querySelector(".apple-iframe").src = "";
+
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      document.querySelector(".apple-iframe").src = "";
+
+    }
+  }
+}
+
+
 /* On Load
 **************************************************************/
 window.addEventListener('load', function () {
@@ -160,7 +198,11 @@ window.addEventListener('load', function () {
   navigation();
   particles();
   form();
-  clickHeroTitle();
   mobileNav();
   swiperPortfolioMode();
+  document.querySelector('.content').addEventListener('touchend', clickHeroTitle);
+  document.querySelector('.content').addEventListener('click', clickHeroTitle);
+  modal();
 });
+
+

@@ -90,9 +90,9 @@
                         <div class="projects-img-container">
                             <img class="project-coverart" src="./img/inshallah.png" alt="">
                             <div class="project-info">
-                                <a class="project-info-link"
-                                    href="https://music.apple.com/us/album/inshallah-lockwood-ave/1568067160"
-                                    target="_blank"><img src="./img/applemusic.svg" width="50" height="50" alt=""></a>
+                                <button class="project-info-link project-info-link-apple"
+                                    data-url="https://embed.music.apple.com/us/album/inshallah-lockwood-ave/1568067160"><img
+                                        src="./img/applemusic.svg" width="50" height="50" alt=""></button>
                                 <a class="project-info-link"
                                     href="https://open.spotify.com/album/4EWOxPvIKm3FaFy0EqCT8D?si=hHE85V0dT1CT9rPOInmSHQ"
                                     target="_blank"><img src="./img/spotify.svg" width="40" height="40" alt=""></a>
@@ -111,9 +111,9 @@
                             <img class="project-coverart" src="./img/midnight.png" alt="">
 
                             <div class="project-info">
-                                <a class="project-info-link"
-                                    href="https://music.apple.com/us/album/midnight-feat-kryoko-single/1593710216"
-                                    target="_blank"><img src="./img/applemusic.svg" width="50" height="50" alt=""></a>
+                                <button class="project-info-link project-info-link-apple"
+                                    data-url="https://embed.music.apple.com/us/album/midnight-feat-kryoko-single/1593710216"><img
+                                        src="./img/applemusic.svg" width="50" height="50" alt=""></button>
                                 <a class="project-info-link"
                                     href="https://open.spotify.com/album/6Hfla6bA9C3NMzda9SzK6c?si=2A1gqbrBTbq63zdFt9FAOw"
                                     target="_blank"><img src="./img/spotify.svg" width="40" height="40" alt=""></a>
@@ -132,9 +132,9 @@
                         <div class="projects-img-container">
                             <img class="project-coverart" src="./img/havana.png" alt="">
                             <div class="project-info">
-                                <a class="project-info-link"
-                                    href="https://music.apple.com/us/album/havana-feat-bigbodysam-single/1576754068"
-                                    target="_blank"><img src="./img/applemusic.svg" width="50" height="50" alt=""></a>
+                                <button class="project-info-link project-info-link-apple"
+                                    data-url="https://embed.music.apple.com/us/album/havana-feat-bigbodysam-single/1576754068"><img
+                                        src="./img/applemusic.svg" width="50" height="50" alt=""></button>
                                 <a class="project-info-link"
                                     href="https://open.spotify.com/album/189PDYP8Iu813kZYsZx3qj?si=Fe5MjvNVTWKBlkS1uAbd-Q"
                                     target="_blank"><img src="./img/spotify.svg" width="40" height="40" alt=""></a>
@@ -152,9 +152,9 @@
                         <div class="projects-img-container">
                             <img class="project-coverart" src="./img/Big Body Sam-4.png" alt="">
                             <div class="project-info">
-                                <a class="project-info-link"
-                                    href="https://music.apple.com/us/album/on-a-roll-feat-thiigo/1524590287?i=1524590291"
-                                    target="_blank"><img src="./img/applemusic.svg" width="50" height="50" alt=""></a>
+                                <button class="project-info-link project-info-link-apple"
+                                    data-url="https://embed.music.apple.com/us/album/on-a-roll-single-feat-thiigo-single/1524590287"><img
+                                        src="./img/applemusic.svg" width="50" height="50" alt=""></button>
                                 <a class="project-info-link"
                                     href="https://open.spotify.com/album/11jdXSY6OEickRuSgmXDdJ?si=ZoFKmIekSrGTo8a-N0ZMZg"
                                     target="_blank"><img src="./img/spotify.svg" width="40" height="40" alt=""></a>
@@ -172,9 +172,9 @@
                         <div class="projects-img-container">
                             <img class="project-coverart" src="./img/summervibe.png" alt="">
                             <div class="project-info">
-                                <a class="project-info-link"
-                                    href="https://music.apple.com/us/album/summer-vibe-feat-bigbodysam/1581536687?i=1581536692"
-                                    target="_blank"><img src="./img/applemusic.svg" width="50" height="50" alt=""></a>
+                                <button class="project-info-link project-info-link-apple"
+                                    data-url="https://embed.music.apple.com/us/album/summer-vibe-feat-bigbodysam/1581536687?i=1581536692"><img
+                                        src="./img/applemusic.svg" width="50" height="50" alt=""></button>
                                 <a class="project-info-link"
                                     href="https://open.spotify.com/track/5fMCiPFAXuc9xLNAd5zxo0?si=9784da16cbaf4a50"
                                     target="_blank"><img src="./img/spotify.svg" width="40" height="40" alt=""></a>
@@ -305,6 +305,26 @@
         </a>
         <div class="footer-copyright">@2022 BIGBODYENTERTAINMENT All Rights Reserved.</div>
     </footer>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+                <iframe class="apple-iframe" allow="autoplay *; encrypted-media *;" frameborder="0" height="450"
+                    style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                    src="https://embed.music.apple.com/us/album/inshallah-lockwood-ave/1568067160"></iframe>
+            </div>
+        </div>
+
+    </div>
+
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
