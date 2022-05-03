@@ -162,16 +162,27 @@ const modal = () => {
   let modal = document.getElementById("myModal");
 
   // Get the button that opens the modal
-  let btn = document.querySelectorAll(".project-info-link-apple");
+  let btn = document.querySelectorAll(".project-info-link");
 
   // Get the <span> element that closes the modal
   let close = document.getElementsByClassName("close")[0];
+
+  let contentIframe = document.querySelector(".modal-content-iframe");
+
 
   // When the user clicks on the button, open the modal
   [...btn].forEach(btn => {
     btn.onclick = (evt) => {
       const url = btn.dataset.url;
-      document.querySelector(".apple-iframe").src = url;
+      const iframeType = btn.dataset.type;
+
+      if (iframeType === "apple") {
+        contentIframe.innerHTML = `<iframe class="apple-iframe" allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="${url}"></iframe>`;
+      } else if (iframeType === "spotify") {
+        contentIframe.innerHTML = `<iframe style="border-radius:12px" src="${url}}" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`
+      } else {
+        contentIframe.innerHTML = `<div class="video-container"> <iframe width="560" height="315" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>`
+      }
       modal.style.display = "block";
     }
   });
@@ -180,7 +191,7 @@ const modal = () => {
   // When the user clicks on <span> (x), close the modal
   close.onclick = () => {
     modal.style.display = "none";
-    document.querySelector(".apple-iframe").src = "";
+    contentIframe.innerHTML = "";
 
   }
 
@@ -188,7 +199,7 @@ const modal = () => {
   window.onclick = (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
-      document.querySelector(".apple-iframe").src = "";
+      contentIframe.innerHTML = "";
 
     }
   }
@@ -220,7 +231,6 @@ const inView = () => {
   let scrollPosition = scrollY + windowHeight;
   // get element position (distance from the top of the page to the bottom of the element)
   let elementPosition = sectionSubset.getBoundingClientRect().top + scrollY + (sectionSubsetHeight / 2);
-  console.log(scrollPosition, elementPosition);
   // is scroll position greater than element position? (is element in view?)
   if (scrollPosition > elementPosition) {
     return true;
@@ -232,7 +242,6 @@ const inView = () => {
 // animate element when it is in view
 const animate = () => {
   // is element in view?
-  console.log(inView());
 
   if (inView()) {
     // element is in view, add class to element
