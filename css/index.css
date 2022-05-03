@@ -704,9 +704,10 @@ footer {
 /* The Close Button */
 .close {
     color: #aaa;
-    float: right;
-    font-size: 28px;
+    display: block;
+    font-size: 40px;
     font-weight: bold;
+    text-align: right;
 }
 
 .close:hover,
