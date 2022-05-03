@@ -213,9 +213,9 @@ const toggleTheme = () => {
     // Then toggle (add/remove) the .dark-theme class to the body
     document.body.classList.toggle('is-dark');
     if (document.body.classList.contains('is-dark')) {
-      btnToggle.innerHTML = 'Toggle Light Mode';
+      btnToggle.innerHTML = 'Enter the light realm';
     } else {
-      btnToggle.innerHTML = 'Toggle Dark Mode';
+      btnToggle.innerHTML = 'Enter the dark realm';
     }
   })
 }
