@@ -1,3 +1,6 @@
+let sectionSubset = document.querySelector('.section-subset');
+let sectionSubsetHeight = sectionSubset.clientHeight;
+
 const navigation = () => {
   const navLinks = document.querySelectorAll('.navul a');
 
@@ -191,7 +194,6 @@ const modal = () => {
   }
 }
 const toggleTheme = () => {
-
   // Select the button
   const btnToggle = document.querySelector('.btn-toggle');
 
@@ -207,6 +209,36 @@ const toggleTheme = () => {
   })
 }
 
+// check if element is in view
+const inView = () => {
+  // get window height
+  let windowHeight = window.innerHeight;
+  // get number of pixels that the document is scrolled
+  let scrollY = window.scrollY || window.pageYOffset;
+
+  // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+  let scrollPosition = scrollY + windowHeight;
+  // get element position (distance from the top of the page to the bottom of the element)
+  let elementPosition = sectionSubset.getBoundingClientRect().top + scrollY + (sectionSubsetHeight / 2);
+  console.log(scrollPosition, elementPosition);
+  // is scroll position greater than element position? (is element in view?)
+  if (scrollPosition > elementPosition) {
+    return true;
+  }
+
+  return false;
+}
+
+// animate element when it is in view
+const animate = () => {
+  // is element in view?
+  console.log(inView());
+
+  if (inView()) {
+    // element is in view, add class to element
+    sectionSubset.classList.add('animate');
+  }
+}
 
 /* On Load
 **************************************************************/
@@ -221,6 +253,7 @@ window.addEventListener('load', function () {
   document.querySelector('.content').addEventListener('click', clickHeroTitle);
   modal();
   toggleTheme();
+  document.addEventListener('scroll', animate);
 });
 
 
