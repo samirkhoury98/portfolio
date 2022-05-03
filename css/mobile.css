@@ -166,3 +166,10 @@
 .swiper-button-next {
     display: block;
 }
+
+.modal-content {
+    width: calc(100% - 40px);
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+}
