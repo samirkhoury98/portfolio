@@ -5,7 +5,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 135px;
+    scroll-padding-top: 155px;
 }
 
 .hero {
@@ -34,7 +34,13 @@ html {
     display: inline-block;
 }
 
-.shine {}
+.face {
+    float: right;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px black;
+}
 
 .homeicon img {
     display: inline-flex;
@@ -253,6 +259,14 @@ body {
 .aboutmedev {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.aboutmedev h3 {
+    margin-bottom: 10px;
+}
+
+.aboutmedev p {
+    margin-bottom: 20px;
 }
 
 .skills {
