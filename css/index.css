@@ -8,6 +8,29 @@ html {
     scroll-padding-top: 155px;
 }
 
+body {
+    --text-color: black;
+    --red: #820c01;
+    --white: white;
+    --text-color-alt: wheat;
+    --background-color: #c4c4c4;
+    --icon-color-primary: black;
+    --icon-color-secondary: black;
+    --icon-color-tertiary: wheat;
+
+
+    background-color: var(--background-color);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+}
+
+body.is-dark {
+    --background-color: black;
+    --text-color: white;
+    --icon-color-primary: wheat;
+    --icon-color-secondary: white;
+}
+
 .hero {
     height: calc(100vh - 130px);
     justify-content: flex-start;
@@ -25,11 +48,10 @@ html {
     position: relative;
     z-index: 9;
     color: #909090;
-
 }
 
 .hero-content-subtitle a {
-    color: #909090;
+    color: var(--text-color);
     text-decoration: none;
     display: inline-block;
 }
@@ -39,28 +61,26 @@ html {
     border-radius: 50%;
     margin-left: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px var(--text-color);
 }
 
-.homeicon img {
+.homeicon svg {
     display: inline-flex;
     padding-top: 30px;
+    fill: var(--icon-color-primary);
+    width: 40px;
+    height: 40px;
 }
 
-.bbs {
-    font-size: 75px;
-    color: black;
-    text-decoration: underline;
-    display: none;
-}
 
 .typewrite {
     border-right: 2px solid rgba(255, 255, 255, .75);
     line-height: 1.15;
     font-size: 75px;
-    color: #820c01;
+    color: var(--red);
     text-decoration: underline;
     animation: blinkTextCursor 500ms infinite normal;
+    font-weight: 700;
 }
 
 @keyframes blinkTextCursor {
@@ -75,7 +95,7 @@ html {
 
 .content {
     font-size: 75px;
-    color: #820c01;
+    color: var(--red);
 }
 
 #particles-js,
@@ -87,13 +107,6 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-
-
-}
-
-body {
-    background-color: #c4c4c4;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .navul {
@@ -106,7 +119,7 @@ body {
 }
 
 .navul a {
-    color: wheat;
+    color: var(--text-color-alt);
     text-decoration: none;
     font-weight: 700;
     padding: 10px 20px;
@@ -116,19 +129,18 @@ body {
 
 .navul a:hover,
 .navul .is-active {
-    background-color: white;
-    color: #820c01;
+    background-color: var(--white);
+    color: var(--red);
     border-radius: 20px;
 }
 
 .header {
-    background-color: #820c01;
+    background-color: var(--red);
     padding-top: 30px;
     padding-bottom: 30px;
     position: sticky;
     top: 0;
     z-index: 10;
-
 }
 
 .header-inner {
@@ -137,13 +149,27 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.btn-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+}
+
+.is-dark .btn-toggle {
+    background-color: white;
+    color: black;
 
 }
 
 .header-inner .logo {
     display: block;
     margin: 0 20px 20px;
-
 }
 
 .section-heading {
@@ -151,11 +177,10 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-
 }
 
 .section-title {
-    border: 5px solid black;
+    border: 5px solid var(--text-color);
     text-align: center;
     padding: 15px 122px;
     font-size: 30px;
@@ -165,8 +190,8 @@ body {
 }
 
 .discography {
-    background-color: #820c01;
-    color: wheat;
+    background-color: var(--red);
+    color: var(--text-color-alt);
     padding: 40px 0px;
     margin-bottom: 40px;
 }
@@ -261,6 +286,7 @@ body {
 .aboutmedev {
     max-width: 1000px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
 .aboutmedev h3 {
@@ -297,6 +323,15 @@ body {
 
 }
 
+.section-subset-item svg {
+    display: block;
+    margin: 0 auto 10px;
+    height: 100px;
+    width: 100px;
+    fill: var(--icon-color-secondary);
+
+}
+
 .section-subset-item-title {
     display: block;
     text-align: center;
@@ -315,21 +350,21 @@ body {
 }
 
 .portfolio .section-heading {
-    background-color: #820c01;
+    background-color: var(--red);
     padding-top: 50px;
     padding-bottom: 50px;
-    color: wheat;
+    color: var(--text-color-alt);
     margin-bottom: 0px;
 }
 
 .portfolio .section-title {
-    border-color: wheat;
+    border-color: var(--text-color-alt);
 }
 
 .portfolio-projects {
     margin-bottom: 20px;
-    border-top: 20px solid black;
-    border-bottom: 20px solid black;
+    border-top: 20px solid var(--text-color);
+    border-bottom: 20px solid var(--text-color);
 }
 
 .portfolio-project {
@@ -367,8 +402,8 @@ body {
 
 input,
 textarea {
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
+    border-left: 3px solid var(--text-color);
+    border-bottom: 3px solid var(--text-color);
     border-right: 0;
     border-top: 0;
     background: transparent;
@@ -381,7 +416,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    background-color: white;
+    background-color: var(--white);
 }
 
 textarea {
@@ -397,8 +432,8 @@ textarea {
 }
 
 #my-form-button {
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border-left: 3px solid var(--text-color);
+    border-right: 3px solid var(--text-color);
     border-top: 0;
     border-bottom: 0;
     background: transparent;
@@ -407,7 +442,7 @@ textarea {
     padding: 10px 30px;
     font-weight: 700;
     text-transform: uppercase;
-    color: black;
+    color: var(--text-color);
     -webkit-appearance: none;
 
 }
@@ -426,8 +461,8 @@ textarea {
 }
 
 footer {
-    background-color: #820c01;
-    color: wheat;
+    background-color: var(--red);
+    color: var(--text-color-alt);
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -435,23 +470,26 @@ footer {
 }
 
 .footer-copyright {
-    color: wheat;
+    color: var(--text-color-alt);
     font-size: 15px;
     padding-top: 20px;
 }
 
 .footer-top-link {
-    color: wheat;
+    color: var(--text-color-alt);
     letter-spacing: .15rem;
     display: block;
     text-decoration: none;
     font-size: 15px;
 }
 
-.footer-top-link img {
+.footer-top-link svg {
     display: block;
     margin: 0 auto;
     margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-color-tertiary);
 }
 
 .mobile-menu {
@@ -538,7 +576,7 @@ footer {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     cursor: pointer;
 }

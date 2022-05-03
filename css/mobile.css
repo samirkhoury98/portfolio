@@ -16,11 +16,6 @@
     width: 40px;
 }
 
-.bbs {
-    font-size: 40px;
-    font-weight: 700;
-}
-
 .typewrite {
     font-size: 40px;
 }
@@ -51,20 +46,37 @@
 .navul a:hover,
 .navul .is-active {
     background-color: transparent;
-    color: wheat;
+    color: var(--text-color-alt);
     border-radius: 0;
 }
 
 .header {
     position: relative;
     top: inherit;
-    padding-bottom: 10px;
+    padding: 0;
 }
 
 .header-inner {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+}
+
+.header-top {
+    padding: 10px 0 20px;
+}
+
+.header-inner .logo {
+    margin: 0 0 0 20px;
+}
+
+.btn-toggle {
+    width: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: inherit;
+    right: inherit;
 }
 
 .section-heading {
@@ -98,7 +110,7 @@
 }
 
 .swiper-pagination-bullet-active {
-    background-color: wheat;
+    background-color: var(--text-color-alt);
 
 }
 
@@ -129,9 +141,8 @@
 .mobile-menu {
     position: absolute;
     display: block;
-    top: 40px;
+    top: 60px;
     right: 20px;
-
 }
 
 .mobile-menu .menu-close-icon {

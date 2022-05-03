@@ -155,17 +155,17 @@ const swiperPortfolioMode = () => {
 const modal = () => {
 
   // Get the modal
-  var modal = document.getElementById("myModal");
+  let modal = document.getElementById("myModal");
 
   // Get the button that opens the modal
-  var btn = document.querySelectorAll(".project-info-link-apple");
+  let btn = document.querySelectorAll(".project-info-link-apple");
 
   // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+  let close = document.getElementsByClassName("close")[0];
 
   // When the user clicks on the button, open the modal
   [...btn].forEach(btn => {
-    btn.onclick = function (evt) {
+    btn.onclick = (evt) => {
       const url = btn.dataset.url;
       document.querySelector(".apple-iframe").src = url;
       modal.style.display = "block";
@@ -174,20 +174,36 @@ const modal = () => {
 
 
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
+  close.onclick = () => {
     modal.style.display = "none";
     document.querySelector(".apple-iframe").src = "";
 
   }
 
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
+  window.onclick = (event) => {
+    if (event.target === modal) {
       modal.style.display = "none";
       document.querySelector(".apple-iframe").src = "";
 
     }
   }
+}
+const toggleTheme = () => {
+
+  // Select the button
+  const btnToggle = document.querySelector('.btn-toggle');
+
+  // Listen for a click on the button
+  btnToggle.addEventListener('click', function () {
+    // Then toggle (add/remove) the .dark-theme class to the body
+    document.body.classList.toggle('is-dark');
+    if (document.body.classList.contains('is-dark')) {
+      btnToggle.innerHTML = 'Toggle Light Mode';
+    } else {
+      btnToggle.innerHTML = 'Toggle Dark Mode';
+    }
+  })
 }
 
 
@@ -203,6 +219,7 @@ window.addEventListener('load', function () {
   document.querySelector('.content').addEventListener('touchend', clickHeroTitle);
   document.querySelector('.content').addEventListener('click', clickHeroTitle);
   modal();
+  toggleTheme();
 });
 
 
