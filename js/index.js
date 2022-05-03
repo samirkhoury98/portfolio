@@ -72,6 +72,8 @@ const typeWriter = (txt) => {
 const clickHeroTitle = (evt) => {
   evt.preventDefault();
   let content = document.querySelector('.content');
+  let shineFullStack = document.querySelector(".shine-full-stack");
+  let shineMusic = document.querySelector(".shine-music");
 
   //Reset count to start the begining of the character.
   i = 0;
@@ -79,9 +81,11 @@ const clickHeroTitle = (evt) => {
   // Remove previous content to start new content.
   document.getElementsByClassName('typewrite')[0].innerHTML = '';
   content.style.pointerEvents = 'none';
-
+  shineFullStack.classList.remove('shine');
+  shineMusic.classList.remove('shine');
 
   if (content.classList.contains('first')) {
+    shineMusic.classList.add('shine');
     content.classList.remove('first');
     content.classList.add('second');
     setTimeout(typeWriter, 50, 'BIGBODYSAM');
@@ -92,13 +96,10 @@ const clickHeroTitle = (evt) => {
   } else {
     content.classList.remove('third');
     content.classList.add('first');
+    shineFullStack.classList.add('shine');
     setTimeout(typeWriter, 50, 'SAMIR KHOURY');
   }
 }
-
-
-// Add this to the onload 
-
 
 const mobileNav = () => {
   document.querySelector('.mobile-menu').addEventListener('click', (event) => {
