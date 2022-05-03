@@ -62,6 +62,9 @@ const typeWriter = (txt) => {
   if (i < txt.length) {
     document.getElementsByClassName('typewrite')[0].innerHTML += txt.charAt(i);
     i++;
+    if (i === txt.length) {
+      document.querySelector('.content').style.pointerEvents = 'all';
+    }
     setTimeout(typeWriter, 65, txt);
   }
 }
@@ -69,33 +72,33 @@ const typeWriter = (txt) => {
 const clickHeroTitle = () => {
   document.querySelector('.content').addEventListener('click', e => {
     let content = document.querySelector('.content');
-    let jsTypewriterContent = document.getElementsByClassName('typewrite')[0];
 
     //Reset count to start the begining of the character.
     i = 0;
 
-    // Remove previous content to start empty content.
-    document.getElementsByClassName('typewrite')[0].innerHTML = ''
+    // Remove previous content to start new content.
+    document.getElementsByClassName('typewrite')[0].innerHTML = '';
+    content.style.pointerEvents = 'none';
+
 
     if (content.classList.contains('first')) {
       content.classList.remove('first');
       content.classList.add('second');
-      setTimeout(typeWriter, 2000, 'BIGBODYSAM');
+      setTimeout(typeWriter, 50, 'BIGBODYSAM');
     } else if (content.classList.contains('second')) {
       content.classList.remove('second');
       content.classList.add('third');
-      setTimeout(typeWriter, 2000, 'HAPPY YOU\'RE HERE');
+      setTimeout(typeWriter, 50, 'HAPPY YOU\'RE HERE');
     } else {
       content.classList.remove('third');
       content.classList.add('first');
-      setTimeout(typeWriter, 2000, 'SAMIR KHOURY');
+      setTimeout(typeWriter, 50, 'SAMIR KHOURY');
     }
   });
 }
 
 
 // Add this to the onload 
-clickHeroTitle();
 
 
 const mobileNav = () => {
@@ -157,7 +160,7 @@ window.addEventListener('load', function () {
   navigation();
   particles();
   form();
-  heroTitle();
+  clickHeroTitle();
   mobileNav();
   swiperPortfolioMode();
 });

@@ -41,12 +41,12 @@ html {
     padding-top: 30px;
 }
 
-/* .bbs {
+.bbs {
     font-size: 75px;
     color: black;
     text-decoration: underline;
     display: none;
-} */
+}
 
 .typewrite {
     border-right: 2px solid rgba(255, 255, 255, .75);
