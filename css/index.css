@@ -227,6 +227,18 @@ body.is-dark {
     color: var(--text-color-alt);
     padding: 40px 0px;
     margin-bottom: 40px;
+    position: relative;
+}
+
+.discography canvas {
+    background: black;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .discography-title {
