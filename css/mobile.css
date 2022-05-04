@@ -109,6 +109,11 @@
     bottom: 0px;
 }
 
+.swiper-pagination-bullet {
+    background-color: white;
+}
+
+
 .swiper-pagination-bullet-active {
     background-color: var(--text-color-alt);
 
