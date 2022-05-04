@@ -693,6 +693,8 @@ footer {
     /* 15% from the top and centered */
     padding: 20px;
     max-width: 400px;
+    border-radius: 20px;
+
 }
 
 .is-dark .modal-content {
