@@ -246,6 +246,10 @@ body.is-dark {
     letter-spacing: .3rem;
     font-size: 20px;
     margin-bottom: 20px;
+    color: wheat;
+    position: relative;
+    z-index: 1;
+
 }
 
 .projects-img-container {
