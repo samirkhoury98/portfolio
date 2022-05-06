@@ -665,7 +665,7 @@ footer {
 .swiper-portfolio .swiper-slide a {
     display: block;
     line-height: 0;
-
+    width: 100%;
 
 }
 
