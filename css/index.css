@@ -662,6 +662,13 @@ footer {
     padding-bottom: 40px;
 }
 
+.swiper-portfolio .swiper-slide a {
+    display: block;
+    line-height: 0;
+
+
+}
+
 .swiper-portfolio img {
     width: 100%;
     height: auto;
