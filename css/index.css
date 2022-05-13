@@ -473,8 +473,12 @@ body.is-dark {
     margin: 0 auto 10px;
     height: 100px;
     width: 100px;
-
 }
+
+.section-subset-item img.reactstrap {
+    filter: drop-shadow(0 0 3px #999);
+}
+
 
 .section-subset-item svg {
     display: block;
@@ -482,7 +486,6 @@ body.is-dark {
     height: 100px;
     width: 100px;
     fill: var(--icon-color-secondary);
-
 }
 
 .section-subset-item-title {
