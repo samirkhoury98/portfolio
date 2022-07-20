@@ -209,7 +209,10 @@ body.is-dark {
 .header-inner .logo {
     display: block;
     margin: 0 20px 20px;
+    width: 100px;
+    height: 100px;
 }
+
 
 .section-heading {
     display: flex;
