@@ -82,6 +82,12 @@ body.is-dark {
     box-shadow: 0 0 20px var(--text-color);
 }
 
+.face-invert {
+    filter: invert(1)
+
+}
+
+
 .homeicon svg {
     display: inline-flex;
     padding-top: 30px;
@@ -176,7 +182,7 @@ body.is-dark {
 .header {
     background-color: var(--red);
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     position: sticky;
     top: 0;
     z-index: 10;

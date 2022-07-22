@@ -369,6 +369,15 @@ const discographySmoke = () => {
   requestAnimFrame(animate);
 }
 
+let invert = document.querySelector(".face")
+invert.addEventListener("click", function(){
+  if (invert.classList.contains("face-invert")){
+      invert.classList.remove("face-invert")
+} else {
+  invert.classList.add("face-invert")
+  }})
+
+
 /* On Load
 **************************************************************/
 window.addEventListener('load', function () {
