@@ -52,8 +52,8 @@
 }
 
 .header {
-    position: relative;
-    top: inherit;
+    position: sticky;
+    /* top: inherit; */
     padding: 0;
 }
 
