@@ -206,17 +206,12 @@ const modal = () => {
 }
 const toggleTheme = () => {
   // Select the button
-  const btnToggle = document.querySelector('.btn-toggle');
+  const btnToggle = document.querySelector('.logo');
 
   // Listen for a click on the button
   btnToggle.addEventListener('click', function () {
     // Then toggle (add/remove) the .dark-theme class to the body
     document.body.classList.toggle('is-dark');
-    if (document.body.classList.contains('is-dark')) {
-      btnToggle.innerHTML = 'ENTER THE LIGHT REALM';
-    } else {
-      btnToggle.innerHTML = 'ENTER THE DARK REALM';
-    }
   })
 }
 

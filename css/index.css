@@ -196,21 +196,6 @@ body.is-dark {
     align-items: center;
 }
 
-.btn-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: black;
-    color: white;
-    border: 0;
-    padding: 5px 10px;
-}
-
-.is-dark .btn-toggle {
-    background-color: white;
-    color: black;
-
-}
 
 .header-inner .logo {
     display: block;
