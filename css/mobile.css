@@ -53,7 +53,6 @@
 
 .header {
     position: sticky;
-    /* top: inherit; */
     padding: 0;
 }
 
@@ -71,14 +70,6 @@
     margin: 0 0 0 20px;
 }
 
-.btn-toggle {
-    width: 100%;
-    width: 100%;
-    display: block;
-    position: relative;
-    top: inherit;
-    right: inherit;
-}
 
 .section-heading {
     padding-left: 20px;

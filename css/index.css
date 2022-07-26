@@ -17,6 +17,7 @@ body {
     --icon-color-primary: black;
     --icon-color-secondary: black;
     --icon-color-tertiary: wheat;
+    --logo-background-color: black;
 
 
     background-color: var(--background-color);
@@ -26,9 +27,11 @@ body {
 
 body.is-dark {
     --background-color: black;
-    --text-color: white;
+    --text-color: #c4c4c4;
     --icon-color-primary: wheat;
     --icon-color-secondary: white;
+    --logo-background-color: #fff;
+
 }
 
 .hero {
@@ -202,8 +205,8 @@ body.is-dark {
     margin: 0 20px 20px;
     width: 100px;
     height: 100px;
+    box-shadow: 0px 0px 10px var(--logo-background-color);
 }
-
 
 .section-heading {
     display: flex;
