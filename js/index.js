@@ -212,7 +212,6 @@ const toggleTheme = () => {
   btnToggle.addEventListener('click', function () {
     // Then toggle (add/remove) the .dark-theme class to the body
     document.body.classList.toggle('is-dark');
-    let logoback = document.querySelector('.logo')
   })
 }
 
@@ -372,6 +371,8 @@ invert.addEventListener("click", function(){
 } else {
   invert.classList.add("face-invert")
   }})
+
+  
 
 
 /* On Load

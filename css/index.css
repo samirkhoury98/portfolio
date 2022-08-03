@@ -206,6 +206,7 @@ body.is-dark {
     width: 100px;
     height: 100px;
     box-shadow: 0px 0px 10px var(--logo-background-color);
+    filter: drop-shadow(0 0 1px var(--logo-background-color));
 }
 
 .section-heading {
