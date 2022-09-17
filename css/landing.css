@@ -92,6 +92,9 @@ box-shadow: 1px solid black;
         height: 100vh;
       
 }
+.swiper-pagination-bullet-active{
+    background: purple;
+}
 
 .swiper-slide img {
     display: flex;
