@@ -486,6 +486,9 @@ body.is-dark {
 .animate .section-subset-item:nth-child(20) {
     animation-delay: calc(20 * 100ms);
 }
+.animate .section-subset-item:nth-child(21) {
+    animation-delay: calc(21 * 100ms);
+}
 
 @keyframes animateIn {
     0% {
